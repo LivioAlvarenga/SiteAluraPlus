@@ -81,15 +81,15 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ### Desktop
 
-![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/desktop.gif)
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/desktop.gif" width="500">
 
 ### Tablet
 
-![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/tablet.gif)
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/tablet.gif" width="300">
 
 ### Mobile
 
-![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/mobile.gif)
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/raw/master/files/mobile.gif" width="300">
 
 &nbsp;
 
