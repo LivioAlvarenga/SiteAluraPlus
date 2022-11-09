@@ -545,6 +545,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 96%;
+  max-width: 80rem;
+  overflow: hidden;
+}
+
 .BntFill {
   margin-bottom: 1rem;
   display: block;
@@ -645,16 +653,16 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -671,8 +679,8 @@ video {
   display: grid;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-\[96\%\] {
@@ -725,6 +733,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .bg-corDeFundo {
@@ -840,6 +852,16 @@ video {
     width: auto;
   }
 
+  .md\:flex-row {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+
+  .md\:flex-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .md\:bg-\[length\:auto_60\%\] {
     background-size: auto 60%;
   }
@@ -851,19 +873,9 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:mx-40 {
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-
-  .lg\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  .lg\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
+  .lg\:order-1 {
+    -ms-flex-order: 1;
+        order: 1;
   }
 
   .lg\:mt-24 {
@@ -876,6 +888,10 @@ video {
 
   .lg\:ml-40 {
     margin-left: 10rem;
+  }
+
+  .lg\:inline-block {
+    display: inline-block;
   }
 
   .lg\:w-full {
@@ -917,8 +933,28 @@ video {
     line-height: 1;
   }
 
+  @keyframes pulse {
+    50% {
+      opacity: .5;
+    }
+  }
+
+  .lg\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   .lg\:hover\:text-botaoAzul:hover {
     --tw-text-opacity: 1;
     color: rgb(22 123 247 / var(--tw-text-opacity));
+  }
+
+  @keyframes pulse {
+    50% {
+      opacity: .5;
+    }
+  }
+
+  .group:hover .lg\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }

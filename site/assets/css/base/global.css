@@ -24,6 +24,9 @@
 @tailwind utilities;
 
 @layer components {
+    .wrapper {
+        @apply w-[96%] mx-auto max-w-7xl overflow-hidden;
+    }
     .BntFill {
         @apply mb-4 block rounded bg-botaoAzul p-4 text-brancoPrincipal no-underline duration-500 ease-in-out lg:hover:bg-botaoAzulEfeito lg:hover:text-corDeFundo;
     }
