@@ -38,7 +38,7 @@ gulp.task("copy-robots", function () {
 /* Imagens */
 gulp.task("imagemin", function () {
     return gulp
-        .src("site/assets/img/**/*")
+        .src(["site/assets/img/**/*.webp", "site/assets/img/**/*.ico"])
         .pipe(
             $.imagemin({
                 progressive: true,
