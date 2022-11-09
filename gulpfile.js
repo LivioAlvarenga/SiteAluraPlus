@@ -93,10 +93,11 @@ gulp.task("replace-sitemap", function () {
 });
 
 // Substituir o caminho das fontes após o build
-gulp.task("replace-font", function () {
+gulp.task("replace-caminho-css", function () {
     return gulp
         .src(`${dir}assets/css/*.css`)
         .pipe($.replace("../../fonts/", "../fonts/"))
+        .pipe($.replace("../../img/", "../img/"))
         .pipe(gulp.dest(`${dir}assets/css/`));
 });
 
@@ -158,7 +159,7 @@ gulp.task(
         "separaCss",
         "concatena-inline-minifica",
         "replace-html-build",
-        "replace-font",
+        "replace-caminho-css",
         "sitemap",
         "replace-sitemap",
         "clean-css-pages"
@@ -175,7 +176,7 @@ gulp.task(
         "separaCss",
         "concatena-inline-minifica",
         "replace-html-build",
-        "replace-font",
+        "replace-caminho-css",
         "sitemap",
         "replace-sitemap",
         "clean-css-pages"
