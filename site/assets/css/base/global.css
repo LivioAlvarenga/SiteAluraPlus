@@ -25,9 +25,9 @@
 
 @layer components {
     .BntFill {
-        @apply mb-4 block rounded bg-botaoAzul p-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:bg-botaoAzulEfeito hover:text-corDeFundo;
+        @apply mb-4 block rounded bg-botaoAzul p-4 text-brancoPrincipal no-underline duration-500 ease-in-out lg:hover:bg-botaoAzulEfeito lg:hover:text-corDeFundo;
     }
     .BntFillOutline {
-        @apply mb-4 block rounded border-2 border-solid border-brancoPrincipal bg-transparent p-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:bg-botaoAzulEfeito hover:text-corDeFundo;
+        @apply mb-4 block rounded border-2 border-solid border-brancoPrincipal bg-transparent p-4 text-brancoPrincipal no-underline duration-500 ease-in-out lg:hover:border-botaoAzulEfeito lg:hover:bg-botaoAzulEfeito lg:hover:text-corDeFundo;
     }
 }

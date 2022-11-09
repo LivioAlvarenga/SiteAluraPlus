@@ -12,15 +12,17 @@
 
     <body class="bg-corDeFundo font-inter text-base font-normal text-brancoPrincipal">
         <section
-            class="grid h-screen grid-cols-[50%_50%] items-center bg-banner bg-contain bg-no-repeat text-center"
+            class="grid h-screen items-center overflow-hidden bg-banner bg-[length:200%_auto] bg-right-top bg-no-repeat text-center md:bg-[length:auto_60%] lg:grid-cols-[50%_50%] lg:bg-contain lg:bg-center"
         >
-            <div class="my-24 ml-40 mr-0">
+            <div
+                class="mx-auto mb-24 mt-80 w-[96%] md:mb-0 md:mt-[30rem] lg:mt-24 lg:mr-0 lg:ml-40 lg:w-full lg:max-w-3xl"
+            >
                 <h1 class="text-3xl font-bold">
                     Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um
                     preço único.
                 </h1>
                 <img
-                    class="mx-auto my-8"
+                    class="mx-auto my-8 w-9/12 md:w-auto"
                     src="./assets/img/Combo.png"
                     alt="O combo+ é a junção do alura+ e o alura lingua"
                 />
@@ -36,14 +38,16 @@
             </div>
         </section>
 
-        <section class="mx-40 my-0 grid h-screen grid-cols-[50%_50%] items-center">
+        <section
+            class="my-0 mx-auto flex h-screen w-[96%] flex-col items-center justify-start gap-24 overflow-hidden lg:mx-40 lg:w-full lg:flex-row"
+        >
             <img
-                class="w-4/5"
+                class="w-full px-4 md:w-auto"
                 src="./assets/img/Plataformas.png"
                 alt="Um monitor e um celular com o alura plus aberto"
             />
-            <div class="p-8">
-                <h2 class="mb-3 text-5xl font-bold">Assista do seu jeito</h2>
+            <div class="lg:p-8">
+                <h2 class="mb-5 text-4xl font-bold md:text-5xl">Assista do seu jeito</h2>
                 <p class="text-cinzaSecundario">
                     Aproveite a tela grande da TV ou assista no tablet, laptop, celular e
                     outros aparelhos. Nossa seleção de cursos não para de crescer.
@@ -51,8 +55,15 @@
             </div>
         </section>
 
-        <section class="my-0 mx-40 grid h-screen grid-cols-[50%_50%] items-center">
-            <div class="p-8">
+        <section
+            class="my-0 mx-auto flex h-screen w-[96%] flex-col items-center justify-start gap-24 overflow-hidden lg:mx-40 lg:w-full lg:flex-row"
+        >
+            <img
+                class="w-full px-4 md:w-auto"
+                src="./assets/img/Telas.png"
+                alt="Tela da alura plus e do alura lingua"
+            />
+            <div class="lg:p-8">
                 <p class="text-cinzaSecundario">
                     Só o Combo+ oferece Alura+ e Alura Língua juntos para você ter acesso
                     a cursos de diversas áreas da tecnologia e aprender inglês ou
@@ -62,21 +73,18 @@
                     >Assine o Combo+</a
                 >
             </div>
-            <img
-                class="w-4/5"
-                src="./assets/img/Telas.png"
-                alt="Tela da alura plus e do alura lingua"
-            />
         </section>
 
-        <section class="my-0 mx-40 grid h-screen grid-cols-[50%_50%] items-center">
+        <section
+            class="my-0 mx-auto flex h-screen w-[96%] flex-col items-center justify-start gap-24 overflow-hidden lg:mx-40 lg:w-full lg:flex-row"
+        >
             <img
-                class="w-4/5"
+                class="w-full px-4 md:w-auto"
                 src="./assets/img/Notebook.png"
                 alt="Notebook com a página do curso HTML5 e CSS3 da Alura aberta"
             />
-            <div class="p-8">
-                <h2 class="mb-3 text-5xl font-bold">Baixe seus cursos</h2>
+            <div class="lg:p-8">
+                <h2 class="mb-5 text-4xl font-bold md:text-5xl">Baixe seus cursos</h2>
                 <p class="text-cinzaSecundario">
                     Baixe e assista quando e onde quiser. Assim, seus favoritos estão
                     sempre com você, até mesmo sem internet.
@@ -84,9 +92,13 @@
             </div>
         </section>
 
-        <section class="my-20 mx-0 flex list-none flex-col items-center justify-center">
-            <h3 class="text-5xl">Disponível nos seus dispositivos favoritos</h3>
-            <ul class="my-20 mx-0 flex list-none justify-center">
+        <section
+            class="mx-auto my-20 flex w-[96%] list-none flex-col items-center justify-center overflow-hidden lg:mx-0 lg:w-full"
+        >
+            <h3 class="text-center text-4xl lg:text-5xl">
+                Disponível nos seus dispositivos favoritos
+            </h3>
+            <ul class="my-20 mx-0 flex list-none flex-col justify-center">
                 <li>
                     <img src="./assets/img/tv.png" alt="ícone de televisão" />
                     <h3 class="text-center text-3xl">TV</h3>
@@ -101,54 +113,57 @@
                 </li>
             </ul>
         </section>
-        <footer class="my-20 mx-12 text-center">
-            <img src="./assets/img/Logo.png" alt="Alura+" class="mx-auto w-auto" />
-            <ul class="mt-6 flex list-none justify-center">
+        <footer
+            id="o"
+            class="my-20 mx-auto w-[96%] overflow-hidden lg:mx-12 lg:w-full lg:text-center"
+        >
+            <img class="mx-auto my-10 w-auto" src="./assets/img/Logo.png" alt="Alura+" />
+            <ul class="my-8 flex list-none flex-col justify-center gap-3">
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Idioma</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Dispositivos compatíveis</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Contrato de assinatura</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Política de privacidade</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Proteção de dados no Brasil</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Anúncios personalizados</a
                     >
                 </li>
                 <li>
                     <a
-                        class="ml-4 text-brancoPrincipal no-underline duration-500 ease-in-out hover:text-botaoAzul active:text-purple-700"
+                        class="block py-1 text-brancoPrincipal no-underline duration-500 ease-in-out active:text-purple-700 lg:hover:text-botaoAzul"
                         href="#"
                         >Ajuda</a
                     >
