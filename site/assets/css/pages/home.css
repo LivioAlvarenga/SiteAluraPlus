@@ -679,8 +679,8 @@ video {
   display: grid;
 }
 
-.max-h-\[108px\] {
-  max-height: 108px;
+.h-\[108px\] {
+  height: 108px;
 }
 
 .min-h-screen {
@@ -691,16 +691,16 @@ video {
   width: 96%;
 }
 
+.w-\[356px\] {
+  width: 356px;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-auto {
   width: auto;
-}
-
-.max-w-\[356px\] {
-  max-width: 356px;
 }
 
 .list-none {
