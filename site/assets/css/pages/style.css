@@ -699,6 +699,14 @@ video {
   width: auto;
 }
 
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-\[356px\] {
+  width: 356px;
+}
+
 .list-none {
   list-style-type: none;
 }

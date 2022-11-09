@@ -687,8 +687,8 @@ video {
   width: 96%;
 }
 
-.w-9\/12 {
-  width: 75%;
+.w-\[356px\] {
+  width: 356px;
 }
 
 .w-full {
