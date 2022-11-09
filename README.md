@@ -1,6 +1,6 @@
 # Alura Plus Combo
 
-Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 e html5.
+Repositório replicando site Alura Plus Combo, utilizando javascript, css3, html5, tailwindcss e gulp para performance e build.
 
 <hr>
 
@@ -9,7 +9,7 @@ Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 
 | :placard: Vitrine.Dev |                             |
 | --------------------- | --------------------------- |
 | :sparkles: Nome       | **Alura Plus Combo** |
-| :label: Tecnologias   | javascript, html5, css3 e figma          |
+| :label: Tecnologias   | javascript, html5, css3, tailwindcss, gulp e figma          |
 | :rocket: URL          | -                           |
 | :fire: Desafio        | -                           |
 
@@ -17,7 +17,7 @@ Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 
 
 <hr>
 
-![](https://github.com/LivioAlvarenga/JavaScriptBackend/blob/main/files/javascript-code.jpg?raw=true#vitrinedev)
+![](https://github.com/LivioAlvarenga/JavaScriptBackend/blob/main/files/AluraPlusDesktop.gif?raw=true#vitrinedev)
 
 <hr>
 
@@ -25,8 +25,9 @@ Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 
 
 <p align="center">
   <a href="#-tecnologias-utilizadas">Tecnologias</a> -
-  <a href="#-funcionamento">Funcionamento</a> -
-  <a href="#-indice">Índice</a> -
+  <a href="#-introducao">Introdução</a> -
+  <a href="#-desafios">Desafios</a> -
+  <a href="#-execucao">Funcionamento</a> -
   <a href="#-contato">Contato</a>
 </p>
 
@@ -43,7 +44,6 @@ Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 
   <a href= "https://www.figma.com/file/xe1qtkCBkIryoVwnCEbpoD/Alura-Plus---Layout-(Copy)?node-id=0%3A1"><img alt="link projeto no figma" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F24E1E&logo=Figma&label=Designer&message=Figma&color=F24E1E"></a>
   <a href= "https://code.visualstudio.com/download"><img alt="vscode download" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=007ACC&logo=Visual Studio Code&label=IDE&message=Visual Studio Code&color=007ACC"></a>
   <a href= "https://github.com/prettier/prettier"><img alt="code formatter prettier" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=F7B93E&logo=Prettier&label=Code Formatter&message=Prettier&color=F7B93E"></a>
-  <a href= "https://en.bem.info/methodology/quick-start/"><img alt="code organization: BEM" src="https://img.shields.io/static/v1?logoWidth=15&logoColor=000000&logo=BEM&label=code organization&message=BEM (Block, Element, Modifier)&color=000000"></a>
 </p>
 
 <p align="center">
@@ -64,85 +64,45 @@ Repositório replicando site Alura Plus Combo, utilizando javascript puro, css3 
 
 &nbsp;
 
-<a id="-funcionamento"></a>
+<a id="-introducao"></a>
 
-## :warning: Funcionamento
+## :bookmark_tabs: Introdução
+  Basicamente uma pagina moderna voltada a conversão do cliente para com seu site e este modelo de pagina é conhecida por Landing Page.
 
-Usamos o Vscode como IDE e o Node.js para rodar JavaScript.
+  > Landing Page página que conta com todos os elementos voltados à conversão, do visitante ao Lead ou da oportunidade ao cliente. Também conhecidas como páginas de aterrissagem, páginas de conversão ou de captura, elas são item-chave nas campanhas de Marketing Digital.
 
-É necessário utilizar a extensão Code Runner para rodar somente trechos do código.
+  Originalmente criada em HTML5, CSS3 e JavaScript. Criei a página observando os requisitos do [layout Figma](https://www.figma.com/file/xe1qtkCBkIryoVwnCEbpoD/Alura-Plus---Layout-(Copy)?node-id=0%3A1).
+
+  Foram realizadas várias modificações como Mobile-First, abstração do css com Tailwindcss e build com tarefas Gulp para aumento da performance.
+
+### Desktop
+
+### Tablet
+
+### Mobile
 
 &nbsp;
 
-<a id="-indice"></a>
+<a id="-desafios"></a>
 
-## :bookmark_tabs: Índice de códigos
+## :warning: Desafios | Problemas Vs Soluções
 
-### 1. Tipos Primitivos
+### Estrutura e organização do projeto
+  * 
 
-    Number
-    String
-    Boolean
-    Undefined
-    Null
-    Object
-    Array
-    Conversão de tipos
-    Tipagem dinâmica (untyped)
+&nbsp;
 
-### 2. Variáveis
+<a id="-funcionamento"></a>
 
-    Declarar X Atribuir
-    Agrupamento de declarações
-    Typeof
-    var, const e let
-    console.log
+## :white_check_mark: Como Executar
 
-### 3. Operadores
+```bash
+npm install
+```
 
-    Operadores Lógicos >, <, >=, <=, \==, !=, === !==
-    == Vs ===
-    || (or) && (and)
-    Operador ternário (condição ? true : false)
-    Unary, Binary and Ternary
-    new (new object)
-    Operadores Aritméticos
-    Operadores de atribuição
-    FALSY e TRUTHY
-    Operator precendence
 
-### 4. Funções
 
-    function declaration
-    function anonymous
-    parameters VS arguments
-    return Vs not return
-    function scope
-    function hoisting
-    arrow function
-    callback function
-    function() constructor
-    high order functions
 
-### 5. Strings
-
-    Conversão para string
-    Concatenando strings
-    Métodos para strings
-
-### 6. Arrays
-
-    Acessando array
-    array esparso
-    array de duas dimensões
-    Destructuring em JS
-    Métodos de array
-
-### 7. Laços de Repetição
-
-    for (laço de repetição clássico)
-    for of
-    forEach
 
 &nbsp;
 
@@ -150,15 +110,28 @@ Usamos o Vscode como IDE e o Node.js para rodar JavaScript.
 
 ## :email: Contato
 
-Olá, eu sou Livio Alvarenga, Engenheiro de Produção | Dev Back-end e Front-end. Sou aficcionado por tecnologia, programação, processos e planejamento. Uni todas essas paixões em uma só profissão. Dúvidas, sugestões e críticas são super bem vindas. Seguem meus contatos.
+  Olá, eu sou Livio Alvarenga, Engenheiro de Produção | Dev Back-end e Front-end. Sou aficcionado por tecnologia, programação, processos e planejamento. Uni todas essas paixões em uma só profissão. Dúvidas, sugestões e críticas são super bem vindas. Seguem meus contatos.
 
--   [www.livioalvarenga.com](https://livioalvarenga.com)
--   contato@livioalvarenga.com
+ * [www.livioalvarenga.com](https://livioalvarenga.com)
+ * contato@livioalvarenga.com
 
 &nbsp;
 
-## :warning: License
+## :no_entry_sign: License
 
 Este projeto é [MIT licensed](./LICENSE).
+
+&nbsp;
+
+## :books: Mais informações do curso
+Alura: [HTML e CSS: praticando HTML/CSS](https://cursos.alura.com.br/course/html-css-praticando-html-css). 
+
+Não foi abordado neste curso Tailwindcss, Responsividade e Performance.
+
+&nbsp;
+
+## :smile: Agradecimento especial
+
+Agradeço a instrutora [Monica Hillman](https://linktr.ee/monicahillman) que lecionou um excelente curso e a [Alura](https://www.alura.com.br/). Muito Obrigado.
 
 ##### _#CompartilheConhecimento_
