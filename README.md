@@ -81,11 +81,11 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ### Desktop
 
-<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/desktop.gif" width="500">
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/raw/master/files/desktop.gif" width="500">
 
 ### Tablet
 
-<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/tablet.gif" width="300">
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/raw/master/files/tablet.gif" width="300">
 
 ### Mobile
 
@@ -97,9 +97,69 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ## :warning: Desafios | Problemas Vs Soluções
 
-### Estrutura e organização do projeto
+##### Estrutura do projeto
 
--
+> Foi redefinido a estrutura de pastas do projeto como Build (versão prod do deloy na vercel) e Site (versão dev).
+
+> Modifiquei o projeto para Mobile-First.
+
+> Adicionei responsividade ao projeto Mobile | Tablet | Desktop.
+
+##### Styles | css
+
+> Utilizei o framework Tailwindcss para gerar o css do projeto.
+
+##### SEO
+
+> Adicionei as metas tags referente a SEO.
+
+> Criei arquivo .htaccess para melhorar os links do projeto e add script de segurança.
+
+> Criei robots e sitemap.xml.
+
+#### Desempenho
+
+> Adicionei as fonts diretamente ao servidor.
+
+> Fiz um preload do logo e banner.
+
+> Adicionei tags picture e source para baixar imagens adequadas para cada tela.
+
+> Adicionei lazyload nas imagens abaixo da primeira sessão.
+
+> Modifiquei formato das imagens para webp.
+
+> Minifiquei arquivos HTML, CSS e JS.
+
+> Adicionei arquivos Js inline para um limite de html ate de 16kb.
+
+#### Automação | Build
+
+> Desenvolvi tarefas no Gulp para otimizar e automatizar o projeto
+
+Ao digitar no terminal gulp start, preparamos o projeto para ambiente de desenvolvimento com tailwindcss monitorando os arquivos.html do projeto.
+
+Ao digitar somente gulp ja realiza o build do projeto seguindo as tarefas abaixo.
+
+```bash
+gulp.task(
+    "default",
+    gulp.series(
+        "clean",
+        gulp.parallel("copy-font", "copy-robots"),
+        "imagemin",
+        "separaCss",
+        "concatena-inline-minifica",
+        "replace-html-build",
+        "replace-caminho-css",
+        "sitemap",
+        "replace-sitemap",
+        "clean-css-pages"
+    )
+);
+```
+
+Todos os arquivos necessários são buildados para o deloy na vecel.
 
 &nbsp;
 
@@ -107,8 +167,30 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ## :white_check_mark: Como Executar
 
+Para executar o projeto basta realizar o download do repositório:
+
+> É preciso ter nodejs instalado, para usar o npm. Também usamos a extensão Live Server do VsCode
+
+Salve em uma pasta de sua escolha e abra o mesmo no VSCode.
+
+-   Instalar as dependências do projeto
+
+Clique com botão direito do mouse no nome da pasta no WORKSPACE e selecione a opção "Abrir no terminal integrado". Digite:
+
 ```bash
 npm install
+```
+
+-   Iniciar ambiente DEV e realizar modificações
+
+```bash
+gulp start
+```
+
+-   Realizar build do projeto e enviar todos os arquivos otimizados para pasta build
+
+```bash
+gulp
 ```
 
 &nbsp;
