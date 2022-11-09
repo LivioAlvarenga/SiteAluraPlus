@@ -28,6 +28,7 @@ Repositório replicando site Alura Plus Combo, utilizando javascript, css3, html
   <a href="#-introducao">Introdução</a> -
   <a href="#-desafios">Desafios</a> -
   <a href="#-execucao">Funcionamento</a> -
+  <a href="#-conclucao">Conclusão</a> -
   <a href="#-contato">Contato</a>
 </p>
 
@@ -159,7 +160,7 @@ gulp.task(
 );
 ```
 
-Todos os arquivos necessários são buildados para o deloy na vecel.
+Todos os arquivos necessários são buildados para o deloy na vercel.
 
 &nbsp;
 
@@ -171,7 +172,7 @@ Para executar o projeto basta realizar o download do repositório:
 
 > É preciso ter nodejs instalado, para usar o npm. Também usamos a extensão Live Server do VsCode
 
-Salve em uma pasta de sua escolha e abra o mesmo no VSCode.
+Salve em uma pasta de sua escolha e abra a mesma no VSCode.
 
 -   Instalar as dependências do projeto
 
@@ -192,6 +193,16 @@ gulp start
 ```bash
 gulp
 ```
+
+&nbsp;
+
+<a id="-conclucao"></a>
+
+## :+1: Conclusão
+
+O objetivo alem de fazer o site foi utilizar as boas praticas para performance e otimização para batermos todos os indicadores do google lighthouse. Além disso adicionamos resposividade, performance, SEO e acessibilidade.
+
+<img src="https://github.com/LivioAlvarenga/SiteAluraPlus/raw/master/files/test-lighthouse.gif" width="500">
 
 &nbsp;
 
