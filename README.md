@@ -17,7 +17,7 @@ Repositório replicando site Alura Plus Combo, utilizando javascript, css3, html
 
 <hr>
 
-![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/AluraPlusDesktop.gif?raw=true?raw=true#vitrinedev)
+![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/AluraPlusDesktop.gif?raw=true#vitrinedev)
 
 <hr>
 
@@ -81,9 +81,15 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ### Desktop
 
+![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/desktop.gif)
+
 ### Tablet
 
+![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/tablet.gif)
+
 ### Mobile
+
+![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/mobile.gif)
 
 &nbsp;
 
