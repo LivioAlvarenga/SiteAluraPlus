@@ -7,9 +7,7 @@
             name="description"
             content="Portfólio Livio Alvarenga repositório replicando site Alura Plus Combo, utilizando javascript, css3, html5, tailwindcss e gulp para performance e build."
         />
-
-        <!-- noindex, nofollow para o google não rastrear esta pagina -->
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta
             name="keywords"
             content="javascript, html5, css3, tailwindcss, gulp, figma, portfólio, Livio Alvarenga"
@@ -66,15 +64,24 @@
                     Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um
                     preço único.
                 </h1>
-                <img
-                    class="mx-auto my-8 w-9/12 md:w-auto"
-                    src="./assets/img/Combo.webp"
-                    alt="O combo+ é a junção do alura+ e o alura lingua"
-                    width="5356"
-                    height="58"
-                    loading="lazy"
-                    type="image/webp"
-                />
+                <picture>
+                    <source
+                        srcset="./assets/img/Combo.webp"
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                        width="356"
+                        height="108"
+                    />
+                    <img
+                        class="mx-auto my-8 w-9/12 md:w-auto"
+                        src="./assets/img/Combo_600.webp"
+                        alt="O combo+ é a junção do alura+ e o alura lingua"
+                        width="259"
+                        height="79"
+                        type="image/webp"
+                    />
+                </picture>
+
                 <a class="BntFill" href="https://www.livioalvarenga.com"
                     >Assine por 12x de R$ 120,00*</a
                 >

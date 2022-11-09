@@ -9,7 +9,7 @@ module.exports = {
             colors: {
                 brancoPrincipal: "#ffffff",
                 cinzaSecundario: "#C0C0C0",
-                botaoAzul: "#167BF7",
+                botaoAzul: "#1646F7",
                 corDeFundo: "#00030C",
                 botaoAzulEfeito: "#3c92fa",
             },
