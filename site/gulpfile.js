@@ -48,11 +48,64 @@ gulp.task("imagemin", function () {
         .pipe(gulp.dest(`${dir}assets/img/`));
 });
 
+// Minificação JS, add suffix .min
+gulp.task("minify-js", function () {
+    return gulp
+        .src("js/**/*.js")
+        .pipe($.uglify())
+        .pipe($.rename({ suffix: ".min" }))
+        .pipe(gulp.dest(`${dir}js/`));
+});
+
+//Minificação CSS, add suffix .min
+gulp.task("minify-css", function () {
+    return gulp
+        .src(["site/assets/css/components/*.css", "site/assets/css/pages/*.css"])
+        .pipe($.cssnano({ safe: true }))
+        .pipe($.rename({ suffix: ".min" }))
+        .pipe(gulp.dest(`${dir}assets/css/`));
+});
+
+//Minificação HTML
+gulp.task("minify-html", function () {
+    return gulp
+        .src(["site/*.html"])
+        .pipe($.htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest(`${dir}`));
+});
+
+// Concatenação useref
+gulp.task("useref", function () {
+    return gulp
+        .src(`${dir}*.html`)
+        .pipe($.useref())
+        .pipe(gulp.dest(`${dir}`));
+});
+
+// Adicionar código inline no html
+gulp.task("inline", function () {
+    return gulp
+        .src("./site/*.html")
+        .pipe($.inlineSource())
+        .pipe(gulp.dest(`${dir}`));
+});
+
 // Concatenação, inline e minificação
 gulp.task("concatena-inline-minifica", function () {
     return gulp
-        .src(["site/index.html"])
+        .src([
+            "site/index.html",
+            "site/termo-de-uso.html",
+            "site/politica-privacidade.html",
+        ])
         .pipe($.if("index.html", $.replace("/style.css", "/home.css")))
+        .pipe(
+            $.if(
+                "politica-privacidade.html",
+                $.replace("/style.css", "/politica-privacidade.css")
+            )
+        )
+        .pipe($.if("termo-de-uso.html", $.replace("/style.css", "/termo-de-uso.css")))
         .pipe($.useref())
         .pipe($.if("*.html", $.inlineSource()))
         .pipe($.if("*.html", $.htmlmin({ collapseWhitespace: true })))
@@ -81,6 +134,8 @@ gulp.task("replace-html-build", function () {
     return gulp
         .src([`${dir}**/*.html`])
         .pipe($.replace("index.html", `${url}`))
+        .pipe($.replace("termo-de-uso.html", `${url}termo-de-uso${ext}`))
+        .pipe($.replace("politica-privacidade.html", `${url}politica-privacidade${ext}`))
         .pipe(gulp.dest(`${dir}`));
 });
 
@@ -106,8 +161,10 @@ Tailwind joga todo css em style.css e todos .html ler o mesmo. Quando fazer o bu
 separa tudo para otimização, criando css somente do que for usar.
 */
 let contentAll = {
-    tudo: 'content: ["./site/index.html"],',
-    home: 'content: ["./site/index.html"],',
+    tudo: 'content: ["./site/index.html", "./site/termo-de-uso.html", "./site/politica-privacidade.html", "./site/js/navbar.js"],',
+    home: 'content: ["./site/index.html", "./site/js/navbar.js"],',
+    politica: 'content: ["./site/politica-privacidade.html", "./site/js/navbar.js"],',
+    termo: 'content: ["./site/termo-de-uso.html", "./site/js/navbar.js"],',
 };
 
 gulp.task("monitoraTudo", function () {
@@ -120,7 +177,7 @@ gulp.task("monitoraTudo", function () {
 gulp.task(
     "startTailwindDev",
     $.shell.task(
-        "npx tailwindcss -i ./site/assets/css/base/global.css -o ./site/assets/css/pages/style.css --watch"
+        "npx tailwindcss -i ./site/assets/css/base/input.css -o ./site/assets/css/pages/style.css --watch"
     )
 );
 
@@ -134,11 +191,47 @@ gulp.task("monitoraHome", function () {
 gulp.task(
     "criaCssHome",
     $.shell.task(
-        "npx tailwindcss -i ./site/assets/css/base/global.css -o ./site/assets/css/pages/home.css"
+        "npx tailwindcss -i ./site/assets/css/base/input.css -o ./site/assets/css/pages/home.css"
+    )
+);
+gulp.task("monitoraTermoUso", function () {
+    return gulp
+        .src("./tailwind.config.js")
+        .pipe($.replace(/content.\s\[[^\][]*],/g, contentAll.termo))
+        .pipe($.clean())
+        .pipe(gulp.dest("./"));
+});
+gulp.task(
+    "criaCssTermoUso",
+    $.shell.task(
+        "npx tailwindcss -i ./site/assets/css/base/input.css -o ./site/assets/css/pages/termo-de-uso.css"
+    )
+);
+gulp.task("monitoraPoliticaPrivacidade", function () {
+    return gulp
+        .src("./tailwind.config.js")
+        .pipe($.replace(/content.\s\[[^\][]*],/g, contentAll.politica))
+        .pipe($.clean())
+        .pipe(gulp.dest("./"));
+});
+gulp.task(
+    "criaCssPoliticaPrivacidade",
+    $.shell.task(
+        "npx tailwindcss -i ./site/assets/css/base/input.css -o ./site/assets/css/pages/politica-privacidade.css"
     )
 );
 
-gulp.task("separaCss", gulp.series("monitoraHome", "criaCssHome"));
+gulp.task(
+    "separaCss",
+    gulp.series(
+        "monitoraHome",
+        "criaCssHome",
+        "monitoraTermoUso",
+        "criaCssTermoUso",
+        "monitoraPoliticaPrivacidade",
+        "criaCssPoliticaPrivacidade"
+    )
+);
 
 // Habilita variáveis em condição de dist
 gulp.task("distOn", function (callback) {

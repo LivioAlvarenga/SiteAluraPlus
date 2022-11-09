@@ -1,0 +1,39 @@
+Options -Indexes
+
+# Protegendo acesso ao .htaccess
+
+<files ~ "^.\*\.([Hh][tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+# end
+
+# Redirecionando site http p/ https
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.\*)$ [R,L]
+
+# end
+
+# Url amigável sem .html
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.\*)$ $1.html [L,NC]
+
+# end
+
+
+# Ao digitar qualquer link e não encontrar envia para home
+
+# ex: https://vreelandroofinginc.com/blablabla
+
+RewriteCond %{REQUEST_FILENAME} !-f # diferente de arquivo
+RewriteCond %{REQUEST_FILENAME} !-d # diferente de diretório
+RewriteRule ^(.\*)$ ./index.html [NC]
+
+# end
