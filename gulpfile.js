@@ -3,13 +3,13 @@ const fs = require("fs");
 
 // Variáveis que determina o fluxo de build e dist. Default build
 let dir = "build/";
-let url = "https://produtivese.vercel.app/";
+let url = "https://aluraplus-hazel-iota.vercel.app/";
 let ext = ".html";
 
 // Função que troca as variáveis
 function distOn() {
     dir = "dist/";
-    url = "https://produtivese.com.br/";
+    url = "https://aluraplus.com.br/";
     ext = "";
 }
 
