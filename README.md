@@ -17,7 +17,7 @@ Repositório replicando site Alura Plus Combo, utilizando javascript, css3, html
 
 <hr>
 
-![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/AluraPlusDesktop.gif?raw=true#vitrinedev)
+![](https://github.com/LivioAlvarenga/SiteAluraPlus/blob/master/files/Monitor_laptop_Tablet_Celular-Fundos_limpos.png?raw=true#vitrinedev)
 
 <hr>
 
