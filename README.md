@@ -72,9 +72,9 @@ Repositório replicando site Alura Plus Combo, utilizando javascript, css3, html
 
 ## :bookmark_tabs: Introdução
 
-Basicamente uma pagina moderna voltada a conversão do cliente para com seu site e este modelo de pagina é conhecida por Landing Page.
+Página moderna voltada à conversão do cliente para seu site. Este modelo de pagina é conhecida por Landing Page.
 
-> Landing Page página que conta com todos os elementos voltados à conversão, do visitante ao Lead ou da oportunidade ao cliente. Também conhecidas como páginas de aterrissagem, páginas de conversão ou de captura, elas são item-chave nas campanhas de Marketing Digital.
+> Landing Page: página que conta com todos os elementos voltados à conversão do visitante ao Lead ou da oportunidade ao cliente. Também conhecidas como páginas de aterrissagem, páginas de conversão ou de captura, elas são item-chave nas campanhas de Marketing Digital.
 
 Originalmente criada em HTML5, CSS3 e JavaScript. Criei a página observando os requisitos do [layout Figma](<https://www.figma.com/file/xe1qtkCBkIryoVwnCEbpoD/Alura-Plus---Layout-(Copy)?node-id=0%3A1>).
 
@@ -100,7 +100,7 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 ##### Estrutura do projeto
 
-> Foi redefinido a estrutura de pastas do projeto como Build (versão prod do deloy na vercel) e Site (versão dev).
+> Foi redefinida a estrutura de pastas do projeto como Build (versão prod do deloy na vercel) e Site (versão dev).
 
 > Modifiquei o projeto para Mobile-First.
 
@@ -114,9 +114,9 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 > Adicionei as metas tags referente a SEO.
 
-> Criei arquivo .htaccess para melhorar os links do projeto e add script de segurança.
+> Criei arquivo .htaccess para melhorar os links do projeto e adicionei script de segurança.
 
-> Criei robots e sitemap.xml.
+> Criei robots.txt e sitemap.xml.
 
 #### Desempenho
 
@@ -140,7 +140,7 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 Ao digitar no terminal gulp start, preparamos o projeto para ambiente de desenvolvimento com tailwindcss monitorando os arquivos.html do projeto.
 
-Ao digitar somente gulp ja realiza o build do projeto seguindo as tarefas abaixo.
+Ao digitar somente gulp já realiza o build do projeto seguindo as tarefas abaixo.
 
 ```bash
 gulp.task(
@@ -160,7 +160,7 @@ gulp.task(
 );
 ```
 
-Todos os arquivos necessários são buildados para o deloy na vercel.
+Todos os arquivos necessários são enviados para pasta build e ficam prontos para o commit. Após commit o deloy na vercel é automático.
 
 &nbsp;
 
@@ -168,7 +168,7 @@ Todos os arquivos necessários são buildados para o deloy na vercel.
 
 ## :white_check_mark: Como Executar
 
-Para executar o projeto basta realizar o download do repositório:
+Para executar o projeto basta realizar o download do repositório.
 
 > É preciso ter nodejs instalado, para usar o npm. Também usamos a extensão Live Server do VsCode
 
@@ -201,6 +201,8 @@ gulp
 ## :+1: Conclusão
 
 O objetivo alem de fazer o site foi utilizar as boas praticas para performance e otimização para batermos todos os indicadores do google lighthouse. Além disso adicionamos resposividade, performance, SEO e acessibilidade.
+
+Além de fazer o site, o objetivo buscado e alcançado foi utilizar as boas práticas para performance e otimização para batermos todos os indicadores do google lighthouse. Adicionamos resposividade, performance, SEO e acessibilidade. Além disso, usamos o framework Tailwindcss que facilita a aplicação de css e evita a repetição de código.
 
 <img src="https://github.com/LivioAlvarenga/SiteAluraPlus/raw/master/files/test-lighthouse.gif" width="500">
 
