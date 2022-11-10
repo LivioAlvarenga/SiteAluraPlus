@@ -136,7 +136,7 @@ Foram realizadas várias modificações como Mobile-First, abstração do css co
 
 #### Automação | Build
 
-> Desenvolvi tarefas no Gulp para otimizar e automatizar o projeto
+> Desenvolvi tarefas no Gulp para otimizar e automatizar o fluxo de desenvolvimento e build.
 
 Ao digitar no terminal gulp start, preparamos o projeto para ambiente de desenvolvimento com tailwindcss monitorando os arquivos.html do projeto.
 
